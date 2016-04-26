@@ -1,0 +1,28 @@
+<project name="Antpractice" default="package">
+	<path id="libpath">
+		<fileset dir="C:\apache-tomcat-7.0.37\lib">
+		<include name="**/*.jar"/>
+		</fileset>
+	</path>
+	<target name="clean">
+		<delete dir="tmp"/>
+	</target>
+	<target name="init" depends="clean">
+		<mkdir dir="tmp/classes"/>
+		<mkdir dir="tmp/jars"/>
+		<mkdir dir="tmp/wars"/>
+		<mkdir dir="tmp/ears"/>
+	</target>
+	<target name="compile" depends="init">
+		<javac destdir="tmp/classes" srcdir="D:\ANt\build2\javaprogs">
+		<classpath refid="libpath"/>
+		</javac>
+	</target>
+	<target name="package" depends="compile">
+		<jar destfile="tmp/jars/abc.jar" basedir="tmp/classes"/>
+		<war destfile="tmp/wars/practice.war" webxml="D:\ANt\build2\web.xml">
+			<fileset dir="tmp/jars"/>
+			<fileset dir="jsp"/>
+		</war>
+	</target>
+</project>
