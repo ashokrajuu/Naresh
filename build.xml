@@ -21,8 +21,8 @@
 	<target name="package" depends="compile">
 		<jar destfile="tmp/jars/abc.jar" basedir="tmp/classes"/>
 		<war destfile="tmp/wars/practice.war" webxml="web.xml">
-			<fileset dir="tmp/jars"/>
-			<fileset dir="**/*.jsp"/>
+			<fileset dir="tmp/classes"/>
+			<fileset dir="jsp"/>
 		</war>
 	</target>
 </project>
