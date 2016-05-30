@@ -8,7 +8,7 @@ pageEncoding="ISO-8859-1"%>
 </head>
 <body>
 <form action="HelloWorld.java">
-<h2>A Hello World Example of JSP.</h2>
+<h2>The war package deployed successfully!!! The application is up and running!!!!</h2>
 </form>
 </body>
 </html>
