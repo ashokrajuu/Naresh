@@ -9,6 +9,7 @@ pageEncoding="ISO-8859-1"%>
 <body>
 <form action="HelloWorld.java">
 <h2>The war package deployed successfully!!! The application is up and running!!!!</h2>
+<h3> Checking Docker now</h3>
 </form>
 </body>
 </html>
